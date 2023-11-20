@@ -34,18 +34,15 @@ def check():
      # Update start_time after the initial 5 seconds
 
     while (time.time() - start_time) < time_limit:
-        while True:
             k = input("Enter existed game name from list...")
             if all(item in games for item in k):
                 break
             if (game1 in k):
                 print(quizgame.quiz_game())
-            else:
+            elif(game2 in k):
                 print(numerguess.number())
-                
-            # else:
-            #     print("Please enter existing game name...")
-        return k
+            else:
+                print("Please enter existing game name...")
     end_time = time.time()
     elapsed_time = end_time - start_time
 
